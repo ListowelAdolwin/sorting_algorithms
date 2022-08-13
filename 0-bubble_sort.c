@@ -17,13 +17,14 @@ void bubble_sort(int *array, size_t size)
 	size_t pass = 0, comp = 0;
         int tmp = 0;
 
-
-	if (size < 2)
+	if (array == NULL || size == 0)
+		return;
+	/*if (size < 2)
 	{
 		print_array(array, size);
 		return;
 	}
-
+	*/
 	else
 	{
 		for (pass = 0; pass < size - 1; pass++)
