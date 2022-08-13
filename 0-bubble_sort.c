@@ -1,45 +1,29 @@
 #include "sort.h"
-
-
 /**
- * bubble_sort- sorts an arraiy in ascending order
- * @array: the array to be sorted
- * @size: the size of the array
- * return: void
- *
- * print_array - prints the array after every swap
- *
+ * bubble_sort - Sort an array with buble sort algorithm
+ * @array: Array that going to be sorted
+ * @size: Size of array
+ * Return: Nothing, just sort and print when swap
  */
-
-
 void bubble_sort(int *array, size_t size)
 {
-	size_t pass = 0, comp = 0;
-        int tmp = 0;
+	int tmp;
+	size_t i, j;
 
 	if (array == NULL || size == 0)
 		return;
-	/*if (size < 2)
-	{
-		print_array(array, size);
-		return;
-	}
-	*/
-	else
-	{
-		for (pass = 0; pass < size - 1; pass++)
-		{
-			for (comp = 0; comp < size - 1 - pass; comp++)
-			{
-				if (array[comp] > array[comp + 1])
-				{
-					tmp = array[comp];
-					array[comp] = array[comp + 1];
-					array[comp + 1] = tmp;
-					print_array(array, size);
-				}
-			}
 
+	for (i = 0; i < size; i++)
+	{
+		for (j = 0; j < size - 1; j++)
+		{
+			if (array[j] > array[j + 1])
+			{
+				tmp = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = tmp;
+				print_array(array, size);
+			}
 		}
 	}
 }
