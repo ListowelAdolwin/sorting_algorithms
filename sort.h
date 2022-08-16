@@ -26,7 +26,7 @@ void insertion_sort_list(listint_t **list);
 void shell_sort(int *array, size_t size);
 void selection_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
-void swap(listint_t **list, listint_t *node);
+void _swap(listint_t **list, listint_t *node);
 void quick_sort(int *array, size_t size);
 void swap(int *a, int *b);
 void quickSort(int arr[], int low, int high, size_t size);
