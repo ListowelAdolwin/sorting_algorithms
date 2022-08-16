@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 /**
- * swap - swaps a node with the next node in the list
+ * _swap - swaps a node with the next node in the list
  * @list: double pointer to the beginning of the list
- * @node: node to swap
+ * @node: node to _swap
  *
  * Return: void
  */
-void swap(listint_t **list, listint_t *node)
+void _swap(listint_t **list, listint_t *node)
 {
 	node->next->prev = node->prev;
 	if (node->prev)
@@ -31,35 +31,35 @@ void swap(listint_t **list, listint_t *node)
  */
 void cocktail_sort_list(listint_t **list)
 {
-	char swapped = 1;
+	char _swapped = 1;
 	listint_t *temp;
 
 	if (list == NULL || *list == NULL)
 		return;
 	temp = *list;
-	while (swapped != 0)
+	while (_swapped != 0)
 	{
-		swapped = 0;
+		_swapped = 0;
 		while (temp->next != NULL)
 		{
 			if (temp->next->n < temp->n)
 			{
-				swap(list, temp);
-				swapped = 1;
+				_swap(list, temp);
+				_swapped = 1;
 				print_list(*list);
 			}
 			else
 				temp = temp->next;
 		}
-		if (swapped == 0)
+		if (_swapped == 0)
 			break;
-		swapped = 0;
+		_swapped = 0;
 		while (temp->prev != NULL)
 		{
 			if (temp->prev->n > temp->n)
 			{
-				swap(list, temp->prev);
-				swapped = 1;
+				_swap(list, temp->prev);
+				_swapped = 1;
 				print_list(*list);
 			}
 			else
