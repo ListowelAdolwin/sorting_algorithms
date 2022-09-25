@@ -1,5 +1,5 @@
 # Sorting Algorithms
-This project handles 12 different sorting algorithms
+This project handles these 12 different sorting algorithms
 
 ### Selection sort
 
